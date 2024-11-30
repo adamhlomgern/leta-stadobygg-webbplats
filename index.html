@@ -24,10 +24,10 @@
 
                     <ul class="nav-links">
                         <li><a href="#home">Hem</a></li>
-                        <li><a href="#services">Tjänster</a></li>
-                        <li><a href="#about">Om oss</a></li>
+                        <li><a href="#services">Om oss</a></li>
+                        <li><a href="#about">Tjänster</a></li>
                     </ul>
-                    <a href="#contact" class="contact-btn">Kontakt</a>
+                    <a href="#contact" class="contact-btn">Kontakta oss</a>
 
 
                     <div class="hamburger" onclick="ShowHide(this)">
@@ -40,8 +40,8 @@
                     <div class="mobile-menu" id="mobileMenu">
                         <ul>
                             <li><a href="#home" onclick="ShowHide()">HEM</a></li>
-                            <li><a href="#services" onclick="ShowHide()">TJÄNSTER</a></li>
                             <li><a href="#about-us" onclick="ShowHide()">OM OSS</a></li>
+                            <li><a href="#services" onclick="ShowHide()">TJÄNSTER</a></li>
                             <li><a href="#contact" onclick="ShowHide()">KONTAKT</a></li>
                         </ul>
                     </div>
@@ -50,19 +50,142 @@
 
             </header>
 
+            <section class="hero">
+                <div class="hero-location-mobile">
+                    <span class="tag">Malmö, Skåne</span>
+                </div>
+                <div class="hero-content">
+                    <div class="hero-location">
+                        <span class="tag">Malmö, Skåne</span>
+                    </div>
+                    <h1>Dammet från renoveringen och dom där fönstrena du aldrig hinner med? Vi tar hand om det åt dig.</h1>
+                    <p>
+                        Med över 35 års erfarenhet vet vi vad som krävs för att skapa det där skinande, ny-städade resultatet. 
+                        Du behöver inte leta längre - vi fixar det åt dig!
+                      </p>
+                      <div class="hero-buttons">
+                        <a href="#services" class="btn-primary">Våra tjänster <img class="hero-icon" src="/bilder/ikoner/tjanst-ikon.png" alt="Ikon av sopborste"></a>
+                        <a href="#contact" class="btn-secondary">Få en offert <img class="hero-icon" src="/bilder/ikoner/penna.png" alt=""></a>
+                      </div>
+                    </div>
+                    <div class="hero-image">
+                      <img src="bilder/hero-3.png" alt="Förstoringsglas isometrisk illustration" />
+                    </div>
+                </div>
+            </section>
 
 
 
-
-
-
-
-
-
-
-
-
-
+            <section class="about-us">
+                <div class="about-container">
+                    <!-- Vänstra kolumnen -->
+                    <div class="about-text">
+                        <span class="tag">OM OSS</span>
+                        <h2>Vår historia: Att skapa rena, fräscha hem sedan dag ett</h2>
+                        <div class="about-image">
+                            <img src="/bilder/iso-hem.png" alt="Isometrisk illustration av ett hus med ett hjärta">
+                        </div>
+                    </div>
+            
+                    <!-- Högra kolumnen -->
+                    <div class="about-right">
+                        <p class="about-description">
+                            I över 35 år har vi skurat och putsat allt från hem och kontor till byggarbetsplatser. 
+                            Det hela började som ett litet familjeföretag i Malmö, och idag är vi glada att kunna 
+                            erbjuda våra tjänster till hela Skåne.
+                        </p>
+                        <div class="about-list">
+                            <div class="list-item">
+                                <div class="list-header" onclick="toggleItem(this)">
+                                    <h3>Enkel bokning & snabb service</h3>
+                                    <span class="toggle-icon">+</span>
+                                </div>
+                                <p class="list-content">
+                                    Vi gör det enkelt för dig - ring, mejla eller fyll i vårt formulär så hör vi av oss. Här får du alltid prata med någon som lyssnar på dina behov och ser till att du får snabb hjälp.
+                                </p>
+                            </div>
+                            <div class="list-item">
+                                <div class="list-header" onclick="toggleItem(this)">
+                                    <h3>Familjeägt & lokalt</h3>
+                                    <span class="toggle-icon">+</span>
+                                </div>
+                                <p class="list-content">
+                                    Vi är stolta över att vara ett familjeägt företag som värnar om lokalsamhället och erbjuder våra tjänster med personlig touch.
+                                </p>
+                            </div>
+                            <div class="list-item">
+                                <div class="list-header" onclick="toggleItem(this)">
+                                    <h3>Erfaren & noggrann personal</h3>
+                                    <span class="toggle-icon">+</span>
+                                </div>
+                                <p class="list-content">
+                                    Med över 35 års erfarenhet kan du lita på att vår personal levererar resultat med noggrannhet och professionalism.
+                                </p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+            
+               
+            <section class="services">
+                <div class="services-header">
+                    <span class="tag">STÄD</span>
+                    <h2>Våra städtjänster</h2>
+                </div>
+                <div class="services-grid">
+                    <!-- Kort 1: Hemstäd -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="/bilder/ikoner/hem.png" alt="Ikon för hemstäd">
+                        </div>
+                        <h3>Hemstäd</h3>
+                        <p>Regelbunden eller anpassad städning av ditt hem. Vi hjälper dig med allt från dammsugning och moppning till att hålla kök och badrum skinande rena.</p>
+                    </div>
+                    <!-- Kort 2: Flyttstäd -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="/bilder/ikoner/flytt.png" alt="Ikon för flyttstäd">
+                        </div>
+                        <h3>Flyttstäd</h3>
+                        <p>Vi ser till att ditt gamla hem är redo för nästa person med en grundlig städning som uppfyller alla krav för flytt.</p>
+                    </div>
+                    <!-- Kort 3: Kontorsstäd -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="/bilder/ikoner/kontor.png" alt="Ikon för kontorsstäd">
+                        </div>
+                        <h3>Kontorsstäd</h3>
+                        <p>Skapa en ren och trivsam arbetsmiljö med vår kontorsstädning. Vi erbjuder anpassade städtjänster för kontor i alla storlekar.</p>
+                    </div>
+                    <!-- Kort 4: Fönsterputs -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="/bilder/ikoner/fonster.png" alt="Ikon för fönsterputs">
+                        </div>
+                        <h3>Fönsterputs</h3>
+                        <p>Få in ljuset ordentligt med våra proffs på fönsterputs. Vi fixar allt från små fönster till stora glaspartier.</p>
+                    </div>
+                    <!-- Kort 5: Dödsbostädning -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="/bilder/ikoner/dödsbo.png" alt="Ikon för dödsbostädning">
+                        </div>
+                        <h3>Dödsbostädning</h3>
+                        <p>Vi hjälper dig genom en svår tid genom att hantera städning och röjning med respekt och omsorg.</p>
+                    </div>
+                    <!-- Kort 6: 10+ andra tjänster -->
+                    <div class="service-card special-card">
+                        <div class="service-icon">
+                            <img src="/bilder/ikoner/borste-rosa.png" alt="Ikon för andra tjänster">
+                        </div>
+                        <h3>10+ andra tjänster</h3>
+                        <a href="#more-services" class="cta-link">Klicka för att utforska →</a>
+                    </div>
+                </div>
+            </section>
+            
 
 
 
@@ -72,6 +195,6 @@
 
         </div>
 
-
+        <script src="/script.js"></script>
     </body>
 </html>

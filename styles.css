@@ -1,30 +1,34 @@
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     max-width: 100%;
+    font-family: basic-sans, sans-serif;
 }
 
 body {
     font-family: 'Basic Sans', sans-serif;
     overflow-x: hidden;
-  }
+}
 
-body, html {
+html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
 }
 
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: none; /* Samma gradient som hero */;
-    position: absolute;
+    background-color: #e6f3ff;
+    position: fixed;
     width: 100%;
     z-index: 1000;
+    top: 0;
 }
 
 .logo img {
@@ -35,6 +39,7 @@ body, html {
     list-style: none;
     display: flex;
 }
+
 .nav-links li {
     margin: 0 20px;
 }
@@ -42,29 +47,27 @@ body, html {
 .nav-links a {
     text-decoration: none;
     color: #000000;
-    font-weight: 600;
+    font-weight: 500;
     transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: #44586e;
+    color: #e22500;
 }
 
-
 .contact-btn {
-    background-color: #A2D5F2; /* Mörkblå färg */
-    color: #000000;
+    background-color: #0032a0;
+    color: #ffffff;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 25px;
-    font-weight: bold;
+    font-weight: 500;
     transition: background-color 0.3s;
-  }
-  
-  .contact-btn:hover {
-    background-color: #44586e; /* Lite ljusare för hovring */
-  }
+}
 
+.contact-btn:hover {
+    background-color: #006de2;
+}
 
 /* Hamburgermeny */
 .hamburger {
@@ -77,15 +80,13 @@ body, html {
 .hamburger div {
     width: 30px;
     height: 4px;
-    background-color: #d6d6d6;
+    background-color: #000000;
     margin: 3px;
     transition: 0.3s;
 }
 
-/* Animation för hamburgermeny (blir ett kryss vid klick) */
 .hamburger.change .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
-    background-color: #d6d6d6;
 }
 
 .hamburger.change .line2 {
@@ -94,7 +95,6 @@ body, html {
 
 .hamburger.change .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
-    background-color: #d6d6d6;
 }
 
 /* Mobilmeny */
@@ -122,13 +122,137 @@ body, html {
 }
 
 .mobile-menu ul li a {
-    color: #d6d6d6;
+    color: #ffe0df;
     font-size: 1.5rem;
     text-decoration: none;
 }
 
 .mobile-menu ul li a:hover {
-    color: #44586e;
+    color: #e22500;
+}
+
+
+.mobile-menu.show {
+    display: flex;
+}
+
+/* Hero-sektion */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12rem 2rem 2rem;
+    background-color: #e6f3ff;
+    padding-bottom: 10rem;
+}
+
+
+.hero-location-mobile {
+    display: none;
+}
+
+.hero-location h3 {
+    padding: 10px, 15px;
+    color: #db2500;
+}
+
+.hero-location-mobile h3 {
+    padding: 10px, 15px;
+    color: #db2500;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    color: #0032a0;
+    margin-bottom: 1rem;
+    font-weight: 900;
+    font-family: arboria, sans-serif;
+    margin-right: 20px;
+}
+
+.hero p {
+    font-size: 1rem;
+    line-height: 1.3;
+    color: #00226d;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    margin-right: 20px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    text-align: left;
+
+}
+
+.hero-icon {
+    width: 20px;
+    align-items: right;
+    margin-left: 10px;
+    display: flex;
+    justify-content: right;
+}
+
+.btn-primary {
+    display: flex;
+    background-color: #ffc0bd;
+    color: #db2500;
+    padding: 5px;
+    padding-left: 15px;
+    border: none;
+    border-radius: 45px;
+    text-decoration: none;
+    font-weight: bold;
+    align-items: center;
+}
+
+.btn-secondary {
+    display: flex;
+    background-color: #ffc0bd;
+    color: #db2500;
+    padding: 5px;
+    padding-left: 15px;
+    border: none;
+    border-radius: 45px;
+    text-decoration: none;
+    font-weight: bold;
+    align-items: center;
+}
+
+.hero-location .tag {
+    display: inline-block;
+    background-color: #ffc0bd;
+    color: #e22500;
+    padding: 0.2rem 1rem;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-weight: 800;
+  }
+
+  .hero-location-mobile .tag {
+    display: inline-block;
+    background-color: #ffc0bd;
+    color: #e22500;
+    padding: 0.2rem 1rem;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    margin-bottom: 0.9rem;
+    font-weight: 800;
+  }
+
+.hero-image img {
+    height: auto;
+    max-width: 380px;
+    padding: 20px;
 }
 
 /* Responsiv design */
@@ -144,11 +268,323 @@ body, html {
     .contact-btn {
         display: none;
     }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 9rem 2rem 2rem;
+
+    }
+
+    .hero p {
+        margin-right: 0;
+    }
+
+    .hero-location {
+        display: none;
+    }
+
+    .hero-location-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-image {
+        margin-top: 2rem;
+        max-width: 580px;
+
+    }
+
+.hero-content h1 {
+    margin-right: 0;
+    margin-bottom: 20px;
 }
 
-/* Visa mobilmenyn när aktiv */
-.mobile-menu.show {
+    .hero-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+}
+
+
+.about-us {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+    align-items: start;
+}
+
+.about-container {
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+}
+
+.about-text {
+    grid-column: span 6;
+    text-align: left;
+}
+
+.about-text .tag {
+    display: inline-block;
+    background-color: #ffc0bd;
+    color: #e22500;
+    padding: 0.2rem 1rem;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.about-text h2 {
+    color: #0032a0;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-family: 'Arboria', sans-serif;
+    font-weight: 900;
+}
+
+.about-image {
+    margin-top: 1rem;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+.about-right {
+    grid-column: span 6;
     display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.about-description {
+    color: #29487f;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.about-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.list-item {
+    border: 1px solid #0032a0;
+    color: #0032a0;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: none;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+
+.list-item .list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.list-header h3 {
+    font-size: 1.1rem;
+    margin: 0;
+    color: #0032a0;
+}
+
+.list-header .toggle-icon {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0032a0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.list-content {
+    max-height: 0;
+    padding: 0 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #29487f;
+    overflow: hidden;
+}
+
+.list-item.open .list-content {
+    max-height: 150px;
+    padding: 1rem;
+}
+
+.list-item.open .list-header {
+    background-color: #e6f3ff;
+}
+
+.list-item.open .toggle-icon {
+    transform: rotate(45deg);
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-text, .about-right {
+        grid-column: span 12;
+        text-align: center;
+
+    }
+
+    .about-text .tag {
+        display: inline-flex;
+        margin-top: 50px;
+        width: 90px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-image img {
+        max-width: 100%;
+    }
+
+    .about-text h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .about-us {
+        padding: 1.4rem 1rem;
+    }
 }
 
 
+
+.services {
+    padding: 4rem 2rem;
+    background-color: #e6f3ff; /* Ljusblå bakgrund */
+    text-align: center;
+}
+
+.services-header {
+    margin-bottom: 2rem;
+}
+
+.services-header .tag {
+    display: inline-block;
+    background-color: #ffc0bd; /* Rosa bakgrund */
+    color: #e22500; /* Röd text */
+    padding: 0.3rem 1rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 0.7rem;
+}
+
+.services-header h2 {
+    color: #0032a0; /* Mörkblå text */
+    font-size: 2.2rem;
+    margin: 0;
+    font-family: arboria, sans serif;
+    font-weight: 900;
+    margin-bottom: 30px;
+
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Max 3 kort per rad */
+    max-width: 900px; /* Begränsad bredd */
+    gap: 1.5rem;
+    margin: 0 auto; /* Centrerar grid */
+}
+
+.service-card {
+    background-color: #ffffff; /* Vit bakgrund */
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    color: #0032a0; /* Mörkblå text */
+    font-size: 1.2rem;
+
+    font-weight: 900;
+}
+
+.service-card p {
+    font-size: 0.9rem;
+    color: #29487f; /* Mörk text */
+    line-height: 1.5;
+}
+
+.special-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border: 2px dashed #0032a0;
+    padding: 2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.special-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.special-card h3 {
+    color: #0032a0;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.special-card .cta-link {
+    color: #0032a0;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.special-card .cta-link:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr; /* Alla kort i en kolumn på små skärmar */
+    }
+
+    .service-card, .special-card {
+        padding: 1.5rem;
+    }
+}
