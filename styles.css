@@ -92,13 +92,7 @@ html {
 
 
 .hamburger {
-    display: flex;
-    top: 20px;
-    right: 20px;
-    flex-direction: column;
-    cursor: pointer;
-    position: fixed;
-    z-index: 1001;
+    display: none;
 }
 
 .hamburger div {
@@ -228,6 +222,19 @@ html {
     border-radius: 8px;
     margin-top: 10px;
     list-style: none;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        top: 20px;
+        right: 20px;
+        flex-direction: column;
+        cursor: pointer;
+        position: fixed;
+        z-index: 1001;
+    }
+    
 }
 
 .mobile-menu ul li .dropdown.show .dropdown-menu {
@@ -463,6 +470,7 @@ html {
     padding: 4rem 2rem;
     background-color: #ffffff;
     align-items: start;
+    margin-bottom: 50px;
 }
 
 .about-container {
@@ -566,7 +574,7 @@ html {
     font-size: 1rem;
     line-height: 1.6;
     color: #29487f;
-    overflow: hidden;§
+    overflow: hidden;
 }
 
 .list-item.open .list-content {
