@@ -313,6 +313,7 @@ html {
     margin-bottom: 1rem;
     font-weight: 900;
     margin-right: 20px;
+    line-height: 0.9;
 }
 
 .hero p {
@@ -532,6 +533,7 @@ html {
     margin-bottom: 1rem;
     font-family: 'Arboria', sans-serif;
     font-weight: 900;
+    line-height: 1;
 }
 
 .about-image {
