@@ -629,7 +629,7 @@ html {
 
     .about-text, .about-right {
         grid-column: span 12;
-        text-align: center;
+        text-align: left;
 
     }
 
