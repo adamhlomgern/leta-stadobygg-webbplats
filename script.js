@@ -103,3 +103,26 @@ function toggleItem(element) {
         parent.classList.add('open');
     }
 }
+
+document.querySelector('.contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const form = e.target;
+
+    // Skicka data till API
+    fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+    })
+    .then(response => {
+        if (response.ok) {
+            window.location.href = 'tack.html';
+        } else {
+            alert('Något gick fel. Försök igen!');
+        }
+    })
+    .catch(error => {
+        console.error('Fel vid skickandet:', error);
+        alert('Något gick fel. Försök igen!');
+    });
+});
