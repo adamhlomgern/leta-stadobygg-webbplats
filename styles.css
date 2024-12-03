@@ -470,7 +470,7 @@ html {
     padding: 4rem 2rem;
     background-color: #ffffff;
     align-items: start;
-    margin-bottom: 50px;
+    
 }
 
 .about-container {
@@ -620,6 +620,7 @@ html {
 
     .about-us {
         padding: 1.4rem 1rem;
+        margin-bottom: 50px;
     }
 }
 
