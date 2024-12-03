@@ -272,7 +272,6 @@ html {
     transform: rotate(180deg);
 }
 
-/* Gör dropdown-menyn synlig när klassen "show" är aktiv */
 .nav-links .dropdown.show .dropdown-menu {
     display: block;
     opacity: 1;
@@ -344,11 +343,11 @@ html {
 
 .btn-primary {
     display: flex;
-    background-color: #ffc0bd;
+
     color: #3b33a8;
     padding: 5px;
     padding-left: 15px;
-    border: none;
+    border: 2px solid #3b33a8;
     border-radius: 45px;
     text-decoration: none;
     font-weight: bold;
@@ -357,15 +356,26 @@ html {
 
 .btn-secondary {
     display: flex;
-    background-color: #ffc0bd;
     color: #3b33a8;
+    border: 2px solid #3b33a8;
     padding: 5px;
     padding-left: 15px;
-    border: none;
     border-radius: 45px;
     text-decoration: none;
     font-weight: bold;
     align-items: center;
+}
+
+.btn-primary:hover {
+    background-color: #ffc0bd;
+    color: #3b33a8;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #ffc0bd;
+    color: #3b33a8;
+    transition: background-color 0.3s ease;
 }
 
 .hero-location .tag {
